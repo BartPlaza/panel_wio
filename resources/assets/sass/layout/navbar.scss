@@ -1,0 +1,32 @@
+#wio_navbar {
+	height: 3em;
+	background-color: black;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar_left {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.navbar_right {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.navbar_item {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#wio_navbar a {
+	color: white;
+	text-decoration: none;
+}
+
+#wio_navbar a:hover {
+	color: #777;
+}
