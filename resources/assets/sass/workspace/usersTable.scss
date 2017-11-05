@@ -1,0 +1,18 @@
+.usersTable_tools {
+	height: 3em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.filter_form {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+
+.filter_form_item {
+	margin-right: 10px;
+}
+

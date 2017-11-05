@@ -9,8 +9,16 @@
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
 //Other files
+@import "welcome";
+@import "panel";
 @import "layout/template";
 @import "layout/navbar";
 @import "layout/footer";
-@import "welcome";
 @import "auth/login";
+@import "workspace/addUser";
+@import "workspace/usersTable";
+@import "workspace/calendar";
+@import "workspace/addSemester";
+@import "workspace/semester";
+
+

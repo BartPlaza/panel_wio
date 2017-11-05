@@ -8350,6 +8350,54 @@ button.close {
   }
 }
 
+.welcome_title {
+  text-align: center;
+}
+
+.welcome_title h1 {
+  font-size: 10vh;
+}
+
+.welcome_title p {
+  font-size: 3vh;
+}
+
+#panel_container {
+  height: 100%;
+}
+
+#panel_workspace {
+  height: 100%;
+}
+
+#panel_sidebar {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: lightblue;
+}
+
+.sidebar_item {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.sidebar_item a {
+  text-decoration: none;
+  color: #777;
+}
+
+.sidebar_item a:hover {
+  cursor: pointer;
+  color: #000;
+}
+
 html,
 body {
   min-height: 100%;
@@ -8440,21 +8488,97 @@ body {
           justify-content: center;
 }
 
-.welcome_title {
-  text-align: center;
-}
-
-.welcome_title h1 {
-  font-size: 10vh;
-}
-
-.welcome_title p {
-  font-size: 3vh;
-}
-
 .login_form {
   width: 400px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.addUser_form {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.usersTable_tools {
+  height: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.filter_form_item {
+  margin-right: 10px;
+}
+
+.calendar_tools {
+  height: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.addSemester_form {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.semester_tools {
+  height: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 

@@ -1,0 +1,31 @@
+#panel_container{
+	height: 100%;
+}
+
+#panel_workspace{
+	height: 100%;
+}
+
+#panel_sidebar{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: lightblue;
+}
+
+.sidebar_item {
+	margin-top: 20px;
+	margin-left: 10px;
+	font-size: 20px;
+}
+
+.sidebar_item a{
+	text-decoration: none;
+	color: #777;
+}
+
+.sidebar_item a:hover {
+	cursor: pointer;
+	color: #000;
+}
+
