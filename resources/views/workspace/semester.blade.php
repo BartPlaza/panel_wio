@@ -14,7 +14,7 @@
 		<tbody>
 			<tr>
 				@foreach($weeks as $week)
-					<td>{{$week->date}}</td>
+					<td>{{$week->simpleDate()}}</td>
 				@endforeach
 			</tr>
 		</tbody>

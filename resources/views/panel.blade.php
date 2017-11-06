@@ -11,6 +11,9 @@
 			<div class="sidebar_item">
 				<a href="/panel/calendar"><i class="fa fa-calendar" aria-hidden="true"></i> Kalendarz </a>
 			</div>
+			<div class="sidebar_item">
+				<a href="/panel/groups"><i class="fa fa-users" aria-hidden="true"></i> Grupy </a>
+			</div>
 		</div>
 	</div>
 @endsection

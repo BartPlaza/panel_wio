@@ -31,3 +31,5 @@ Route::get('/panel/calendar', 'CalendarController@show');
 Route::get('/panel/addSemester', 'SemesterController@create');
 Route::post('/panel/addSemester', 'SemesterController@store');
 Route::get('/panel/semester/{year}/{season}', 'SemesterController@show');
+
+Route::get('/panel/groups', 'GroupController@show');
