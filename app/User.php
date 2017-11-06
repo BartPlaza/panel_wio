@@ -28,6 +28,12 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function group() {
+
+        return $this->belongsTo(Group::class);
+
+    }
+
     public function getAge(){
 
         return Carbon::parse($this->attributes['birthDate'])->age;
