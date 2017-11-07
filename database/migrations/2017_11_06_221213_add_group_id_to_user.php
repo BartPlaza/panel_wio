@@ -14,7 +14,7 @@ class AddGroupIdToUser extends Migration
     public function up()
     {
         Schema::table('Users', function (Blueprint $table) {
-            $table->integer('group_id')->after('birthDate');
+            $table->integer('group_id')->after('birthDate')->nullable();
         });
     }
 
