@@ -1,20 +1,14 @@
 @extends('panel')
 @section('workspace')
-	<div class="group_tools">
-		<a href="/panel/groups/{{$id}}/addUsers" class="btn btn-link">Dodaj osoby</a>
-		<a href="/panel/groups/{{$id}}/deleteUsers" class="btn btn-link">Usuń osoby</a>
-		<form action="/panel/groups/{{$id}}" method="post">
-			{{csrf_field()}}
-			{{method_field('DELETE')}}
-			<button type="submit" class="btn btn-link">Usuń grupę</button>
-		</form>
-	</div>
+<form action="#" method="post">
+	{{csrf_field()}}
 	<table class="table">
 		<thead>
 			<tr>
 				<th>Imię</th>
 				<th>Nazwisko</th>
 				<th>Wiek</th>
+				<th><b>Wybierz</b></th>
 			</tr>						
 		</thead>
 		<tbody>
@@ -23,6 +17,7 @@
 					<td>{{$user->name}}</td>
 					<td>{{$user->surname}}</td>
 					<td>{{$user->getAge()}}</td>
+					<td><input type="radio" name="selected" value="{{$user->id}}"></td>
 				</tr>
 			@endforeach
 		</tbody>

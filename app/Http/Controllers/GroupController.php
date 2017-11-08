@@ -19,7 +19,7 @@ class GroupController extends Controller
 
     	$users = Group::find($id)->users;
 
-    	return view('workspace.showGroup', compact('users'));
+    	return view('workspace.showGroup', compact(['users','id']));
     }
 
     public function create() {
@@ -40,5 +40,22 @@ class GroupController extends Controller
     	User::where('id', $request->input('lider_id'))->update(['group_id' => $group->id]);
 
     	return redirect('panel/groups');
+    }
+
+    public function destroy($id) 
+    {
+    	Group::where('id', $id)->delete();
+    	User::where('group_id', $id)->update(['group_id'=>null]);
+
+    	return redirect('/panel/groups');
+    }
+
+    public function addUsers($id) 
+    {
+    	return view('groups.addToGroup');
+    }
+
+    public function deleteUsers($id) {
+
     }
 }

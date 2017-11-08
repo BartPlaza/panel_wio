@@ -34,5 +34,7 @@ Route::get('/panel/semester/{year}/{season}', 'SemesterController@show');
 
 Route::get('/panel/groups', 'GroupController@index');
 Route::get('/panel/groups/{id}', 'GroupController@show');
-Route::get('panel/addGroup', 'GroupController@create');
-Route::post('panel/addGroup', 'GroupController@store');
+Route::delete('/panel/groups/{id}', 'GroupController@destroy');
+Route::get('/panel/groups/{$id}/addUsers', 'GroupController@addUsers');
+Route::get('/panel/addGroup', 'GroupController@create');
+Route::post('/panel/addGroup', 'GroupController@store');
