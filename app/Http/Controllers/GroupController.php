@@ -52,7 +52,9 @@ class GroupController extends Controller
 
     public function addUsers($id) 
     {
-    	return view('groups.addToGroup');
+    	$users = User::where('group_id', '')->orWhereNull('group_id')->get();
+
+    	return view('groups.addToGroup', compact('users'));
     }
 
     public function deleteUsers($id) {

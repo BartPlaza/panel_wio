@@ -17,7 +17,7 @@
 					<td>{{$user->name}}</td>
 					<td>{{$user->surname}}</td>
 					<td>{{$user->getAge()}}</td>
-					<td><input type="radio" name="selected" value="{{$user->id}}"></td>
+					<td><input type="checkbox" name="selected" value="{{$user->id}}"></td>
 				</tr>
 			@endforeach
 		</tbody>
