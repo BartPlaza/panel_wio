@@ -3,6 +3,7 @@
 	<div class="group_tools">
 		<a href="/panel/groups/{{$id}}/addUsers" class="btn btn-link">Dodaj osoby</a>
 		<a href="/panel/groups/{{$id}}/deleteUsers" class="btn btn-link">Usuń osoby</a>
+		<a href="/panel/groups/{{$id}}/changeLider" class="btn btn-link">Zmień lidera</a>
 		<form action="/panel/groups/{{$id}}" method="post">
 			{{csrf_field()}}
 			{{method_field('DELETE')}}
