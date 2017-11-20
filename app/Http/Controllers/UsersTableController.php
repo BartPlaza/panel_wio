@@ -43,6 +43,11 @@ class UsersTableController extends Controller
     		$users = $users->where('birthDate','>', $minDate)->where('birthDate','<', $maxDate);
     	}
 
+        if($request->input('status_filter') != '') {
+            
+            $users = $users->where('status', $request->input('status_filter'));
+        }
+
     	return view('workspace.usersTable', compact('users'));
     }
 

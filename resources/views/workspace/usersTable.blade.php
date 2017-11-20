@@ -21,6 +21,14 @@
 				</select>
 				</div>
 				<div class="filter_form_item">
+				<label class="filter_label" for="age_filter">Status </label>
+				<select id="status_filter" name="status_filter" class="selectpicker">
+					<option selected value="">All</option>
+					<option value=1>Aktywny</option>
+					<option value=0>Nieaktywny</option>
+				</select>
+				</div>
+				<div class="filter_form_item">
 					<button class="btn btn-xs btn-default" type="submit">Filtruj</button>
 				</div>
 			</form>
