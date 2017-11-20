@@ -39,4 +39,9 @@ class User extends Authenticatable
         return Carbon::parse($this->attributes['birthDate'])->age;
 
     }
+
+    public function getStatus(){
+
+        return $this->status ? 'aktywny' : 'nieaktywny';
+    }
 }

@@ -17,4 +17,5 @@ class Group extends Model
     	return User::find($this->lider_id);
     	 
     }
+
 }

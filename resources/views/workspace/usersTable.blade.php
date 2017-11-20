@@ -38,6 +38,8 @@
 				<th>Email</th>
 				<th>Telefon</th>
 				<th>Wiek</th>
+				<th>Status</th>
+				<th>Grupa</th>
 			</tr>						
 		</thead>
 		<tbody>
@@ -51,6 +53,8 @@
 					<td>{{$user->email}}</td>
 					<td>{{$user->phone}}</td>
 					<td>{{$user->getAge()}}</td>
+					<td>{{$user->getStatus()}}</td>
+					<td>{{$user->group_id}}</td>
 				</tr>
 			@endforeach
 		</tbody>
