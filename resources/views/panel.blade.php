@@ -14,6 +14,9 @@
 			<div class="sidebar_item">
 				<a href="/panel/groups"><i class="fa fa-users" aria-hidden="true"></i> Grupy </a>
 			</div>
+			<div class="sidebar_item">
+				<a href="/panel/attendance"><i class="fa fa-th-list" aria-hidden="true"></i> Obecności </a>
+			</div>
 		</div>
 	</div>
 @endsection

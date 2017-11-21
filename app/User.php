@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Carbon\Carbon;
+use App\Attendance;
 
 class User extends Authenticatable
 {
@@ -43,5 +44,15 @@ class User extends Authenticatable
     public function getStatus(){
 
         return $this->status ? 'aktywny' : 'nieaktywny';
+    }
+
+    public function getAttendance(Week $week){
+
+        $attendance = Attendance::where('user_id', $this->id)->where('week_id', $week->id)->first();
+        if($attendance !== null) {
+            return $attendance->value;
+        } else {
+            return 'null';
+        }
     }
 }

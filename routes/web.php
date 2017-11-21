@@ -43,3 +43,9 @@ Route::get('/panel/groups/{id}/changeLider', 'GroupController@changeLiderView');
 Route::post('/panel/groups/{id}/changeLider', 'GroupController@changeLider');
 Route::get('/panel/addGroup', 'GroupController@create');
 Route::post('/panel/addGroup', 'GroupController@store');
+
+Route::get('/panel/attendance', 'AttendanceController@index');
+Route::get('/panel/attendance/{user_id}/{week_id}', 'AttendanceController@show');
+Route::post('/panel/attendance/{user_id}/{week_id}', 'AttendanceController@store');
+Route::put('/panel/attendance/{user_id}/{week_id}', 'AttendanceController@update');
+Route::delete('/panel/attendance/{user_id}/{week_id}', 'AttendanceController@delete');
