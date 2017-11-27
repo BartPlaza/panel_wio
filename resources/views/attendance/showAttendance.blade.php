@@ -10,7 +10,8 @@
 			<tr>
 				<th></th>
 				@foreach($weeks as $week)
-					<th>{{$week->name}}</th>
+					<th>{{$week->name}} <vue-locker week_id="{{$week->id}}"></vue-locker>
+						{{$week->simpleDate()}}</th>
 				@endforeach
 			</tr>						
 		</thead>
@@ -28,6 +29,12 @@
 				@endforeach
 			</tr>
 			@endforeach
+			<tr>
+				<td></td>
+				@foreach($weeks as $week)
+				 <td><vue-attendance-sum week_id="{{$week->id}}"></vue-attendance-sum></td>
+				@endforeach
+			</tr>
 		</tbody>
 	</table>
 @endsection

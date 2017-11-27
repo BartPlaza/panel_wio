@@ -17,6 +17,10 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('vue-attendance', require('./components/Attendance.vue'));
+Vue.component('vue-attendance-sum', require('./components/SumOfAttendance.vue'));
+Vue.component('vue-locker', require('./components/Locker.vue'));
+
+window.eventBus = new Vue ();
 
 const app = new Vue({
     el: '.table'
