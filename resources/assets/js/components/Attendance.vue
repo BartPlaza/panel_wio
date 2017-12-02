@@ -51,13 +51,7 @@
             }
         },
         created: function() {
-            var vm = this;
             this.vueValue = this.value;
-            eventBus.$on('lockedChange', (week)=>{
-                if(week == this.week_id){
-                    vm.locked = !vm.locked;
-                }
-            })
             /*var vue = this;
             axios.get('/panel/attendance/' + this.user_id + '/' + this.week_id)
             .then(function (response) {

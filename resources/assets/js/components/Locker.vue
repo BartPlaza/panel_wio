@@ -16,7 +16,6 @@ export default {
 	methods: {
 		lock: function() {
 			this.locked = !this.locked;
-			eventBus.$emit('lockedChange', this.week_id);
 		}
 	}
 
