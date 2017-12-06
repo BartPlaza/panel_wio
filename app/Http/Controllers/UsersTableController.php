@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Attendance;
 use Carbon\Carbon;
 
 class UsersTableController extends Controller
@@ -85,6 +86,22 @@ class UsersTableController extends Controller
 
     	return redirect('/panel/usersTable');
 
+    }
+
+    public function showUser($id) {
+        $user = User::find($id);
+        return view('workspace.user', compact('user'));
+    }
+
+    public function destroy($id) {
+        $user = User::find($id);
+        if($user->group == null) {
+            $user->delete();
+            Attendance::where('user_id', $id)->delete();
+            return redirect('/panel/usersTable');
+        } else {
+            return redirect('/panel/user/'.$user->id)->with('errorMessage', 'Ten użytkownik jest przypisany do grupy. Usuń go z grupy, aby móc usunąć go z bazy. Usuwaj użytkowników tylko w przypadku błędu, w innym przypadku zmień jego status.');
+        }
     }
 
 }

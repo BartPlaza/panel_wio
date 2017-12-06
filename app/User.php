@@ -46,6 +46,22 @@ class User extends Authenticatable
         return $this->status ? 'aktywny' : 'nieaktywny';
     }
 
+    public function getLider(){
+        if($this->group != null){
+            $liderId = $this->group->lider_id;
+            $lider = User::find($liderId);
+            return $lider->name.' '.$lider->surname;
+        } else {
+            return 'brak';
+        }
+    }
+
+    public function getCreatedDate(){
+
+        $date = Carbon::parse($this->created_at);
+        return $date->format('m-Y');
+    }
+
     public function getAttendance(Week $week){
 
         $attendance = Attendance::where('user_id', $this->id)->where('week_id', $week->id)->first();

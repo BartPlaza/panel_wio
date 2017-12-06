@@ -1,7 +1,7 @@
 @extends('panel')
 @section('workspace')
 	<div class="usersTable_tools">
-			<a href="/panel/addUser"><i class="fa fa-plus" aria-hidden="true"></i>  Dodaj uczestnika</a></td>
+			<a href="/panel/addUser"><i class="fa fa-plus" aria-hidden="true"></i>  Dodaj uczestnika</a>		
 			<form action="/panel/usersTable/filter" method="get" class="filter_form">
 				<div class="filter_form_item">
 				<label for="sex_filter">Płeć </label>
@@ -48,11 +48,12 @@
 				<th>Wiek</th>
 				<th>Status</th>
 				<th>Grupa</th>
+				<th>Profil</th>
 			</tr>						
 		</thead>
 		<tbody>
 			@foreach($users as $user)
-				<tr>
+				<tr class="users_table_row">
 					<td></td>
 					<td>{{$user->id}}</td>
 					<td>{{$user->name}}</td>
@@ -63,6 +64,7 @@
 					<td>{{$user->getAge()}}</td>
 					<td>{{$user->getStatus()}}</td>
 					<td>{{$user->group_id}}</td>
+					<td><a href="/panel/user/{{$user->id}}"><i class="fa fa-user" aria-hidden="true"></i></a></td>
 				</tr>
 			@endforeach
 		</tbody>

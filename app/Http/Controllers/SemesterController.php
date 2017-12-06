@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Semester;
 use App\Rules\uniqueCombination;
 use App\Rules\isDayOfWeek;
+use App\Rules\ifWeekExists;
 
 class SemesterController extends Controller
 {
@@ -19,7 +20,7 @@ class SemesterController extends Controller
 
     	$this->validate($request, ['year'=>['required', new uniqueCombination('semesters', 'season', $request->input('season'))],
     							   'season'=>'required',
-    							   'startDate'=>['required','date','unique:semesters,endDate', new isDayOfWeek(4)],
+    							   'startDate'=>['required','date','unique:semesters,endDate', new isDayOfWeek(4), new ifWeekExists($request->input('startDate'), $request->input('endDate'))],
     							   'endDate'=>['required','date','unique:semesters,startDate', new isDayOfWeek(4)]], $messages = ['year.required'=>'Rok jest wymagany',
     							   																'season.required'=>'Semestr jest wymagany',
     							   																'startDate.required'=>'Data rozpoczęcia jest wymagana',
