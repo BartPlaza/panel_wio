@@ -20,9 +20,10 @@ Vue.component('vue-attendance', require('./components/Attendance.vue'));
 Vue.component('vue-attendance-sum', require('./components/SumOfAttendance.vue'));
 Vue.component('vue-locker', require('./components/Locker.vue'));
 Vue.component('vue-attendance-chart', require('./components/AttendanceChart.vue'));
+Vue.component('vue-user-data', require('./components/UserData.vue'));
 
 window.eventBus = new Vue ();
 
 const app = new Vue({
-    el: '.attendance-container'
+    el: '#panel_container'
 });

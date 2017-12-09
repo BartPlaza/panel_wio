@@ -14,33 +14,32 @@
 			</div>
 			<div class="user_profile_data">
 				<div class="user_profile_row">
-
-					<span class="col-lg-3">Płeć:</span>
-					<span class="col-lg-3">{{$user->sex}}</span>
-					<span class="col-lg-3">Wiek:</span>
-					<span class="col-lg-3">{{$user->getAge()}}</span>
+					<span class="col-xs-3">Płeć:</span>
+					<span class="col-xs-3">{{$user->sex}}</span>
+					<span class="col-xs-3">Wiek:</span>
+					<span class="col-xs-3">{{$user->getAge()}}</span>
 				</div>
 				<hr class="user_profile_hr">
 				<div class="user_profile_row">
-					<span class="col-lg-3">Data ur.:</span>
-					<span class="col-lg-9">{{$user->birthDate}}</span>
+					<span class="col-xs-3">Data ur.:</span>
+					<vue-user-data class="col-xs-9" user_id="{{$user->id}}" column ="birthDate" value="{{$user->birthDate}}" type="date"></vue-user-data>
 				</div>
 				<hr class="user_profile_hr">
 				<div class="user_profile_row">
-					<span class="col-lg-3">Email:</span>
-					<span class="col-lg-9">{{$user->email}}</span>
+					<span class="col-xs-3">Email:</span>
+					<vue-user-data class="col-xs-9" user_id="{{$user->id}}" column ="email" value="{{$user->email}}" type="email"></vue-user-data>
 				</div>
 				<hr class="user_profile_hr">
 				<div class="user_profile_row">
-					<span class="col-lg-3">Tel.:</span>
-					<span class="col-lg-9">{{$user->phone}}</span>
+					<span class="col-xs-3">Tel.:</span>
+					<vue-user-data class="col-xs-9" user_id="{{$user->id}}" column ="phone" value="{{$user->phone}}" type="text"></vue-user-data>
 				</div>
 				<hr class="user_profile_hr">
 				<div class="user_profile_row">
-					<span class="col-lg-3">Utworzono:</span>
-					<span class="col-lg-3">{{$user->getCreatedDate()}}</span>
-					<span class="col-lg-3">Grupa:</span>
-					<span class="col-lg-3">{{$user->getLider()}}</span>
+					<span class="col-xs-3">Utworzono:</span>
+					<span class="col-xs-3">{{$user->getCreatedDate()}}</span>
+					<span class="col-xs-3">Grupa:</span>
+					<span class="col-xs-3">{{$user->getLider()}}</span>
 				</div>			
 			</div>
 		</div>

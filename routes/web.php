@@ -29,6 +29,7 @@ Route::get('/panel/usersTable/filter', 'UsersTableController@filter');
 
 Route::get('/panel/user/{id}', 'UsersTableController@showUser');
 Route::delete('/panel/user/{id}', 'UsersTableController@destroy');
+Route::put('/panel/user/{id}/{column}/{value}', 'UsersTableController@updateUser');
 
 Route::get('/panel/calendar', 'CalendarController@show');
 Route::get('/panel/addSemester', 'SemesterController@create');

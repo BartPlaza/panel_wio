@@ -93,6 +93,10 @@ class UsersTableController extends Controller
         return view('workspace.user', compact('user'));
     }
 
+    public function updateUser($id, $column, $value) {
+        $user = User::where('id', $id)->update([$column => $value]);
+    }
+
     public function destroy($id) {
         $user = User::find($id);
         if($user->group == null) {
