@@ -10,6 +10,9 @@ use App\Rules\ifWeekExists;
 
 class SemesterController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
 
     public function create() {
 
