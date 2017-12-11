@@ -53,3 +53,5 @@ Route::get('/panel/attendance/{user_id}/{week_id}', 'AttendanceController@show')
 Route::post('/panel/attendance/{user_id}/{week_id}', 'AttendanceController@store');
 Route::put('/panel/attendance/{user_id}/{week_id}', 'AttendanceController@update');
 Route::delete('/panel/attendance/{user_id}/{week_id}', 'AttendanceController@delete');
+
+Route::get('/panel/stats', 'StatsController@index');

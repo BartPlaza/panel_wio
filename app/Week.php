@@ -12,6 +12,10 @@ class Week extends Model
     	return $this->belongsTo(Semester::class);
     }
 
+    public function attendances() {
+    	return $this->hasMany(Attendance::class);
+    }
+
     public function simpleDate() {
     	$date = Carbon::parse($this->date);
     	return $date->format('d.m');
@@ -25,5 +29,16 @@ class Week extends Model
     	} else {
     		return false;
     	}
+    }
+
+    public function presentUsers(){
+    	return $presentUsers = $this->attendances->where('value',1)->count();
+
+    }
+
+    public function allUsers(){
+    	$presentUsers = $this->presentUsers();
+    	$absendUsers = $this->attendances->where('value',0)->count();
+    	return $allUsers = $presentUsers + $absendUsers;
     }
 }
