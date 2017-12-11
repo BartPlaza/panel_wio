@@ -7,7 +7,10 @@
 		<thead>
 			<tr>
 				@foreach($weeks as $week)
-					<th>{{$week->name}}</th>
+					<th>{{$week->name}}
+					@if($week->nextDate())
+					<i class="fa fa-arrow-down" aria-hidden="true"></i>	
+					@endif</th>
 				@endforeach
 			</tr>						
 		</thead>
@@ -15,6 +18,11 @@
 			<tr>
 				@foreach($weeks as $week)
 					<td>{{$week->simpleDate()}}</td>
+				@endforeach
+			</tr>
+			<tr>
+				@foreach($weeks as $week)
+					<td class="semester_week_title">{{$week->subject}}</td>
 				@endforeach
 			</tr>
 		</tbody>

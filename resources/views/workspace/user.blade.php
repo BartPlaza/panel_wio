@@ -52,11 +52,6 @@
 					<form action="/panel/user/{{$user->id}}" method="post" class="user_profile_footer_button">
 						{{csrf_field()}}
 						{{method_field('DELETE')}}
-						<button class="btn btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-					</form>
-					<form action="/panel/user/{{$user->id}}" method="post" class="user_profile_footer_button">
-						{{csrf_field()}}
-						{{method_field('DELETE')}}
 						<button class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
 					</form>
 				</span>

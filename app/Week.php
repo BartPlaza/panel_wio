@@ -16,4 +16,14 @@ class Week extends Model
     	$date = Carbon::parse($this->date);
     	return $date->format('d.m');
     }
+
+    public function nextDate() {
+    	$today = Carbon::now();
+    	$date = Carbon::parse($this->date);
+    	if(($today <= $date)&&($today > $date->subDays(7))){
+    		return true;
+    	} else {
+    		return false;
+    	}
+    }
 }

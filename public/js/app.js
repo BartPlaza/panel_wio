@@ -18587,7 +18587,7 @@ return zhTw;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(139);
-module.exports = __webpack_require__(236);
+module.exports = __webpack_require__(239);
 
 
 /***/ }),
@@ -18616,7 +18616,7 @@ Vue.component('vue-attendance', __webpack_require__(169));
 Vue.component('vue-attendance-sum', __webpack_require__(175));
 Vue.component('vue-locker', __webpack_require__(178));
 Vue.component('vue-attendance-chart', __webpack_require__(183));
-Vue.component('vue-user-data', __webpack_require__(245));
+Vue.component('vue-user-data', __webpack_require__(236));
 
 window.eventBus = new Vue();
 
@@ -73978,28 +73978,14 @@ if (false) {
 
 /***/ }),
 /* 236 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 237 */,
-/* 238 */,
-/* 239 */,
-/* 240 */,
-/* 241 */,
-/* 242 */,
-/* 243 */,
-/* 244 */,
-/* 245 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(6)
 /* script */
-var __vue_script__ = __webpack_require__(246)
+var __vue_script__ = __webpack_require__(237)
 /* template */
-var __vue_template__ = __webpack_require__(247)
+var __vue_template__ = __webpack_require__(238)
 /* template functional */
   var __vue_template_functional__ = false
 /* styles */
@@ -74039,7 +74025,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 246 */
+/* 237 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -74086,7 +74072,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 247 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -74256,6 +74242,12 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-a2f39ecc", module.exports)
   }
 }
+
+/***/ }),
+/* 239 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

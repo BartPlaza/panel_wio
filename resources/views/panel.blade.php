@@ -17,6 +17,9 @@
 			<div class="sidebar_item">
 				<a href="/panel/attendance"><i class="fa fa-th-list" aria-hidden="true"></i> Obecności </a>
 			</div>
+			<div class="sidebar_item">
+				<a href="#"><i class="fa fa-line-chart" aria-hidden="true"></i> Statystyki </a>
+			</div>
 		</div>
 	</div>
 @endsection

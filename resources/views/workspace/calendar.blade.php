@@ -4,7 +4,7 @@
 		<a href="/panel/addSemester"><i class="fa fa-plus" aria-hidden="true"></i>  Dodaj semestr</a></td>
 		<div class="semesters_list">
 			@foreach($semesters as $semester)
-			<a href='/panel/semester/{{$semester->year}}/{{$semester->season}}'>{{$semester->year}} {{$semester->season}}</a>
+			<a href='/panel/semester/{{$semester->year}}/{{$semester->season}}' class="btn btn-default">{{$semester->year}} {{$semester->season}}</a>
 			@endforeach
 		</div>
 	</div>

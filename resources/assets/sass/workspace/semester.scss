@@ -5,3 +5,12 @@
 	justify-content: space-between;
 	align-items: center;
 }
+
+.semester_week_title {
+max-width: 5px;
+transform: rotate(90deg);
+transform-origin: 35% 65%;
+white-space: nowrap;
+text-transform: uppercase;
+font-size: 11px;
+}

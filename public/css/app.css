@@ -8712,6 +8712,17 @@ body {
           align-items: center;
 }
 
+.semester_week_title {
+  max-width: 5px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: 35% 65%;
+          transform-origin: 35% 65%;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
 .groups_tools {
   height: 3em;
   display: -webkit-box;
