@@ -31,4 +31,35 @@ class Semester extends Model
     		$i = $i->addDays(7);
     	} 
     }
+
+    public function getPresentUsers(){
+        $array = [];
+        $weeks = $this->weeks;
+
+        foreach($weeks as $week){
+            array_push($array, $week->presentUsers());
+        };
+        return json_encode($array);
+    }
+
+    public function getAllUsers(){
+        $array =[];
+        $weeks = $this->weeks;
+
+        foreach($weeks as $week){
+            array_push($array, $week->allUsers());
+        };
+        return json_encode($array);
+    }
+
+    public function getUsersBySex($sex){
+        $array =[];
+        $weeks = $this->weeks;
+
+        foreach($weeks as $week){
+            array_push($array, $week->getUsersBySex($sex));
+        };
+        return json_encode($array);
+    }
+
 }

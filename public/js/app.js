@@ -18617,6 +18617,7 @@ Vue.component('vue-attendance-sum', __webpack_require__(175));
 Vue.component('vue-locker', __webpack_require__(178));
 Vue.component('vue-attendance-chart', __webpack_require__(183));
 Vue.component('vue-user-data', __webpack_require__(236));
+Vue.component('vue-stats-chart', __webpack_require__(248));
 
 window.eventBus = new Vue();
 
@@ -73964,7 +73965,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("canvas", { attrs: { id: "attendanceChart", height: "100hpx" } })
+  return _c("canvas", { attrs: { id: "attendanceChart", height: "100px" } })
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -74248,6 +74249,294 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(249)
+}
+var normalizeComponent = __webpack_require__(6)
+/* script */
+var __vue_script__ = __webpack_require__(251)
+/* template */
+var __vue_template__ = __webpack_require__(252)
+/* template functional */
+  var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\StatsChart.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6a3cc0c4", Component.options)
+  } else {
+    hotAPI.reload("data-v-6a3cc0c4", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 249 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(250);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(12)("1aa089a0", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6a3cc0c4\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./StatsChart.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6a3cc0c4\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./StatsChart.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 250 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(11)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n#stats-container{\n\tborder: 1px solid darkgrey;\n}\n#stats-menu{\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-box-pack: start;\n\t    -ms-flex-pack: start;\n\t        justify-content: flex-start;\n\tbackground-color: lightgrey;\n}\n.stats-menu-item{\n\tpadding:5px;\n\tbackground-color: lightgrey;\n\tborder-bottom: 1px solid darkgrey;\n\tborder-right: 1px solid darkgrey;\n}\n.stats-menu-item:hover{\n\tcursor:pointer;\n}\n.item-active{\n\tbackground-color: #f7f7f7;\n\tborder: none;\n\tborder-top: 2px solid darkgrey;\n\tborder-right: 1px solid darkgrey;\n\tcursor: default;\n\tpointer-events: none;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 251 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_chart_js__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_chart_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_chart_js__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+	props: ['weeks', 'present_users', 'all_users', 'males', 'females'],
+	data: function data() {
+		return {
+			vueWeeks: [],
+			vuePresentUsers: [],
+			vueAllUsers: [],
+			vueMales: [],
+			vueFemales: [],
+			chart: '',
+			activeItem: 'attendance'
+		};
+	},
+	methods: {
+		generateWeeks: function generateWeeks() {
+			for (var i = 1; i <= this.weeks; i++) {
+				this.vueWeeks.push('T' + i);
+			}
+		},
+		generateAttendance: function generateAttendance() {
+			this.chart = new __WEBPACK_IMPORTED_MODULE_0_chart_js___default.a(this.$refs.statsChart, {
+				type: 'line',
+				data: {
+					labels: this.vueWeeks,
+					datasets: [{ label: 'Obecni', data: this.vuePresentUsers }, { label: 'Wszyscy', data: this.vueAllUsers, fill: false }]
+				},
+				options: {
+					elements: {
+						line: {
+							tension: 0 // disables bezier curves
+						}
+					}
+				}
+			});
+		},
+		generateSex: function generateSex() {
+			this.chart = new __WEBPACK_IMPORTED_MODULE_0_chart_js___default.a(this.$refs.statsChart, {
+				type: 'bar',
+				data: {
+					labels: this.vueWeeks,
+					datasets: [{ label: 'Mężczyźni', data: this.vueMales, backgroundColor: '#5bc0de' }, { label: 'Kobiety', data: this.vueFemales, backgroundColor: '#d9534f' }]
+				},
+				options: {
+					elements: {
+						line: {
+							tension: 0 // disables bezier curves
+						}
+					}
+				}
+			});
+		},
+		generateAge: function generateAge() {
+			this.chart = new __WEBPACK_IMPORTED_MODULE_0_chart_js___default.a(this.$refs.statsChart, {
+				type: 'bar',
+				data: {
+					labels: this.vueWeeks,
+					datasets: [{ label: 'Mężczyźni', data: this.vueMales, backgroundColor: '#5bc0de' }, { label: 'Kobiety', data: this.vueFemales, backgroundColor: '#d9534f' }]
+				},
+				options: {
+					scales: {
+						xAxes: [{ stacked: true }],
+						yAxes: [{ stacked: true }]
+					},
+					elements: {
+						line: {
+							tension: 0 // disables bezier curves
+						}
+					}
+				}
+			});
+		},
+		showAttendance: function showAttendance() {
+			this.activeItem = 'attendance';
+			if (this.chart != '') {
+				this.chart.destroy();
+			};
+			this.generateAttendance();
+		},
+		showSex: function showSex() {
+			this.activeItem = 'sex';
+			this.chart.destroy();
+			this.generateSex();
+		},
+		showAge: function showAge() {
+			this.activeItem = 'age';
+			this.chart.destroy();
+			this.generateAge();
+		}
+	},
+	created: function created() {
+		this.generateWeeks();
+		this.vuePresentUsers = JSON.parse(this.present_users);
+		this.vueAllUsers = JSON.parse(this.all_users);
+		this.vueMales = JSON.parse(this.males);
+		this.vueFemales = JSON.parse(this.females);
+	},
+	mounted: function mounted() {
+		this.showAttendance();
+	}
+});
+
+/***/ }),
+/* 252 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { attrs: { id: "stats-container" } }, [
+    _c("div", { attrs: { id: "stats-menu" } }, [
+      _c(
+        "div",
+        {
+          staticClass: "stats-menu-item",
+          class: { "item-active": _vm.activeItem == "attendance" },
+          on: { click: _vm.showAttendance }
+        },
+        [_vm._v("Obecność\n\t\t")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "stats-menu-item",
+          class: { "item-active": _vm.activeItem == "sex" },
+          on: { click: _vm.showSex }
+        },
+        [_vm._v("Płeć\n\t\t")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "stats-menu-item",
+          class: { "item-active": _vm.activeItem == "age" },
+          on: { click: _vm.showAge }
+        },
+        [_vm._v("Wiek\n\t\t")]
+      )
+    ]),
+    _vm._v(" "),
+    _c("canvas", {
+      ref: "statsChart",
+      attrs: { id: "statsChart", height: "100px" }
+    })
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-6a3cc0c4", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

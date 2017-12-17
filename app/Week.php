@@ -32,7 +32,7 @@ class Week extends Model
     }
 
     public function presentUsers(){
-    	return $presentUsers = $this->attendances->where('value',1)->count();
+    	return $this->attendances->where('value',1)->count();
 
     }
 
@@ -41,4 +41,23 @@ class Week extends Model
     	$absendUsers = $this->attendances->where('value',0)->count();
     	return $allUsers = $presentUsers + $absendUsers;
     }
+
+    public function getUsersBySex($sex){
+	    $absends = $this->attendances->where('value', 0);
+	    $presents = $this->attendances->where('value', 1);
+	    	
+	    $absendUsers = 0;
+	    $presentUsers = 0;
+	    foreach($absends as $attendance){
+	    	if($attendance->user->sex == $sex) {
+	    		$absendUsers++;
+	    	}
+	    }
+	    foreach($presents as $attendance){
+	    	if($attendance->user->sex == $sex) {
+	    		$presentUsers++;
+	    	}
+	    }
+	    return $absendUsers + $presentUsers;
+	}
 }

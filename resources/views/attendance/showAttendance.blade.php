@@ -32,7 +32,9 @@
 		<tbody>
 			@foreach($users as $user)
 			<tr class="attendance-row">
-				<td>{{$user->name.' '.$user->surname}}</td>
+				<td class="attendace-nowrap {{$user->sex == 'M' ? 'text-info' : 'text-danger'}}">
+					{{$user->name.' '.$user->surname}}
+				</td>
 				@foreach($weeks as $week)
 					<td><vue-attendance user_id="{{$user->id}}" 
 										week_id="{{$week->id}}" 

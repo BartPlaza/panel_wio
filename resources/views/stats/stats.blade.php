@@ -33,11 +33,17 @@
 		<tbody>
 			<tr class="attendance-row">
 				@foreach($weeks as $week)
-				<td>{{$week->presentUsers().' / '.$week->allUsers()}}</td>
+				<td class="stats-inline">{{$week->presentUsers().' / '.$week->allUsers()}}</td>
 				@endforeach
 			</tr>
 		</tbody>
 	</table> 
+	<vue-stats-chart weeks="{{$weeks->count()}}"
+					 present_users="{{$semester->getPresentUsers()}}"
+					 all_users="{{$semester->getAllUsers()}}"
+					 males="{{$semester->getUsersBySex('M')}}"
+					 females="{{$semester->getUsersBySex('K')}}">
+	</vue-stats-chart>
 	</div>
 
 @endsection

@@ -5,6 +5,7 @@
 		<div class="user_profile_nav">
 			<span>
 				{{$user->name.' '.$user->surname}}
+
 			</span>
 			<a href="/panel/usersTable"><i class="fa fa-times" aria-hidden="true"></i></a> 
 		</div>
@@ -40,7 +41,23 @@
 					<span class="col-xs-3">{{$user->getCreatedDate()}}</span>
 					<span class="col-xs-3">Grupa:</span>
 					<span class="col-xs-3">{{$user->getLider()}}</span>
-				</div>			
+				</div>
+				<hr class="user_profile_hr">
+				<div class="user_profile_row">
+					<span class="col-xs-3"></span>
+					<span class="col-xs-3"></span>
+					<span class="col-xs-3">Uprawnienia:</span>
+					<span class="col-xs-3">
+						@foreach($user->roles as $role)
+						{{$role->name}}
+						@endforeach	
+					</span>
+				</div>		
+
+
+
+
+					
 			</div>
 		</div>
 		<div class="user_profile_footer">

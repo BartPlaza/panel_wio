@@ -29,10 +29,18 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function roles() {
+
+        return $this->belongsToMany(Role::class, 'users_roles');
+    }
+
     public function group() {
 
         return $this->belongsTo(Group::class);
+    }
 
+    public function isAdmin() {
+        return $this->roles->contains('name', 'admin');
     }
 
     public function getAge(){

@@ -27,7 +27,7 @@
 		<button type="submit" class="btn btn-success col-md-3 col-md-offset-9"><b>Usuń z grupy</b></button>
 	</div>
 	<div class=" form-group text-center col-md-6">
-		<a href="/panel/groups"><div class="btn btn-danger col-md-3"><b>Anuluj</b></div></a>
+		<a href="/panel/groups/{{$id}}"><div class="btn btn-danger col-md-3"><b>Anuluj</b></div></a>
 	</div>
 	<div class="col-md-12">
 		@include('auth.errors')

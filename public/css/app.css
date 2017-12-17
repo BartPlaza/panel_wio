@@ -8740,6 +8740,15 @@ body {
           align-items: center;
 }
 
+.group_tools_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .addGroup_form {
   padding-top: 20px;
   display: -webkit-box;
@@ -8759,16 +8768,33 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+.group_tools_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 .attendance-row:hover {
   color: #202020;
   background-color: #DCDCDC;
+}
+
+.attendace-nowrap {
+  white-space: nowrap;
+}
+
+.stats-inline {
+  white-space: nowrap;
 }
 

@@ -21,6 +21,7 @@ Vue.component('vue-attendance-sum', require('./components/SumOfAttendance.vue'))
 Vue.component('vue-locker', require('./components/Locker.vue'));
 Vue.component('vue-attendance-chart', require('./components/AttendanceChart.vue'));
 Vue.component('vue-user-data', require('./components/UserData.vue'));
+Vue.component('vue-stats-chart', require('./components/StatsChart.vue'));
 
 window.eventBus = new Vue ();
 

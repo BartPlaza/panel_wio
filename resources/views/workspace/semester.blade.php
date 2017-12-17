@@ -1,7 +1,16 @@
 @extends('panel')
 @section('workspace')
 	<div class="semester_tools">
-		<a href="/panel/addSemester"><i class="fa fa-plus" aria-hidden="true"></i>  Dodaj semestr</a>
+		<div class="semester_tools_left">
+			<form action="/panel/semester/{{$semester->id}}" method="post">
+				{{csrf_field()}}
+				{{method_field('DELETE')}}
+				<button type="submit" class="btn btn-link">Usuń semestr</button>
+			</form>
+		</div>
+		<div class="semester_tools_right">
+			<a href="/panel/calendar">Wróć</a>
+		</div>
 	</div>
 	<table class="table">
 		<thead>

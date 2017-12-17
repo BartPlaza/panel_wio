@@ -51,10 +51,10 @@ class SemesterController extends Controller
 
     public function show($year, $season) {
 
-        $weeks = Semester::where('year', $year)->where('season', $season)->first();
-        $weeks = $weeks->weeks;
+        $semester = Semester::where('year', $year)->where('season', $season)->first();
+        $weeks = $semester->weeks;
 
-    	return view('workspace.semester', compact('weeks'));
+    	return view('workspace.semester', compact('semester','weeks'));
 
     }
 }
