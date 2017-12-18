@@ -8,6 +8,11 @@ use App\Week;
 
 class StatsController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+        $this->middleware('admin');
+    }
+
     public function index(Request $request){
 
     	$semesters = Semester::orderBy('endDate', 'desc')->get();

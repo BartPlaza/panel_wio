@@ -22,7 +22,7 @@ class AttendanceController extends Controller
         if($request->has('semester_id')){
            $semester = Semester::find($request->input('semester_id')); 
         } else {
-           $semester = $semesters->first();
+           $semester = $semesters->where('startDate','<=',Carbon::today()->toDateString())->orderBy('endDate', 'desc')->first();
         }
     	$weeks = Week::where('semester_id', $semester->id)->get();
 
